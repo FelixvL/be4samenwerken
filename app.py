@@ -2,6 +2,7 @@ from flask import Flask
 from flask_cors import CORS
 
 import woz_data_opvragen
+import felix
 
 app = Flask(__name__)
 CORS(app)
@@ -23,4 +24,8 @@ def huizen_allen():
 @app.route("/cbs/woz_per_regio_en_steden")
 def woz_per_regio_en_steden():
   return woz_data_opvragen.woz_per_regio_en_steden()
+
+@app.route("/felixvoorbeeld")
+def felixvoorbeeld():
+  return felix.mijnmethode()
 
