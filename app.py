@@ -3,6 +3,7 @@ from flask_cors import CORS
 
 import woz_data_opvragen
 import felix
+import Tizz
 
 app = Flask(__name__)
 CORS(app)
@@ -29,3 +30,6 @@ def woz_per_regio_en_steden():
 def felixvoorbeeld():
   return felix.mijnmethode()
 
+@app.route("/stijn")
+def StijnDank():
+  return Tizz.mijnmethode()
